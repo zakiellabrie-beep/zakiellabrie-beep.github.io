@@ -1,0 +1,672 @@
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f2f2ef;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(242, 242, 239, 0.94);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #d5d5d1;
+}
+
+.nav-container {
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 19px 28px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    text-decoration: none;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+.logo span {
+    font-weight: 400;
+
+    margin-left: 5px;
+}
+
+
+/* NAV LINKS */
+
+nav {
+    display: flex;
+
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    transition: opacity 0.2s;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+.section {
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 115px 28px;
+}
+
+.eyebrow {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: clamp(45px, 7vw, 88px);
+
+    line-height: 0.9;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 55px;
+}
+
+h2 span {
+    font-weight: 300;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button {
+    display: inline-block;
+
+    padding: 15px 24px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    border: 1px solid #111111;
+
+    transition:
+        transform 0.2s,
+        background 0.2s,
+        color 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.button-outline {
+    background: transparent;
+
+    color: #111111;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    max-width: 1180px;
+
+    min-height: 88vh;
+
+    margin: auto;
+
+    padding: 85px 28px;
+
+    display: grid;
+
+    grid-template-columns: 1.45fr 0.55fr;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+/* HERO TITLE */
+
+.hero h1 {
+    font-size: clamp(72px, 12vw, 145px);
+
+    line-height: 0.79;
+
+    letter-spacing: -7px;
+
+    font-weight: 900;
+}
+
+.hero h1 span {
+    font-weight: 300;
+}
+
+
+/* HERO DESCRIPTION */
+
+.hero-subtitle {
+    font-size: 20px;
+
+    max-width: 520px;
+
+    margin-top: 34px;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-top: 34px;
+}
+
+
+/* BIG 44 */
+
+.hero-number {
+    height: 430px;
+
+    background: #151515;
+
+    color: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transform: rotate(2deg);
+}
+
+.number {
+    font-size: 210px;
+
+    line-height: 0.8;
+
+    font-weight: 900;
+
+    letter-spacing: -15px;
+}
+
+.hero-number p {
+    margin-top: 28px;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+.about-text {
+    max-width: 600px;
+
+    font-size: 20px;
+}
+
+.about-text p + p {
+    margin-top: 22px;
+}
+
+
+/* STATS */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+}
+
+.stat strong {
+    display: block;
+
+    font-size: 48px;
+
+    line-height: 1;
+}
+
+.stat span {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   DARK SECTION
+===================================================== */
+
+.dark-section {
+    max-width: none;
+
+    background: #151515;
+
+    color: #ffffff;
+
+    padding-left: max(
+        28px,
+        calc((100% - 1124px) / 2)
+    );
+
+    padding-right: max(
+        28px,
+        calc((100% - 1124px) / 2)
+    );
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline {
+    border-left: 1px solid #777777;
+
+    padding-left: 30px;
+
+    display: grid;
+
+    gap: 42px;
+}
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 20px;
+}
+
+.timeline-year {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.6;
+}
+
+.timeline-item h3 {
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    margin: 0;
+
+    opacity: 0.65;
+}
+
+
+/* =====================================================
+   ACHIEVEMENTS
+===================================================== */
+
+.achievement-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 17px;
+}
+
+.achievement-card {
+    border: 1px solid #c9c9c4;
+
+    padding: 34px;
+
+    min-height: 200px;
+
+    transition:
+        transform 0.2s,
+        background 0.2s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+
+    background: #e9e9e5;
+}
+
+.card-number {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.6;
+}
+
+.achievement-card h3 {
+    font-size: 24px;
+
+    margin-top: 25px;
+
+    margin-bottom: 10px;
+}
+
+.achievement-card p {
+    color: #444444;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.video-placeholder {
+    min-height: 260px;
+
+    background: #151515;
+
+    color: #ffffff;
+
+    padding: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.play-button {
+    width: 70px;
+
+    height: 70px;
+
+    border: 1px solid #777777;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 18px;
+}
+
+.video-placeholder p {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.6;
+}
+
+.video-placeholder h3 {
+    font-size: 27px;
+
+    margin: 7px 0;
+}
+
+.video-placeholder small {
+    opacity: 0.6;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.skills span {
+    border: 1px solid #999999;
+
+    padding: 14px 20px;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    font-weight: 800;
+
+    letter-spacing: 0.7px;
+
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+.skills span:hover {
+    background: #111111;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-section {
+    background: #dcdcd8;
+
+    padding: 120px max(
+        28px,
+        calc((100% - 1124px) / 2)
+    );
+}
+
+.contact-section h2 {
+    margin-bottom: 35px;
+}
+
+.contact-section h2 span {
+    font-weight: 300;
+}
+
+.contact-text {
+    max-width: 610px;
+
+    font-size: 19px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 30px 28px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 760px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 65px;
+    }
+
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+
+    .hero-number {
+        height: 280px;
+
+        margin-top: 30px;
+    }
+
+    .number {
+        font-size: 145px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 82px 28px;
+    }
+
+    .contact-section {
+        padding-top: 85px;
+
+        padding-bottom: 85px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+    }
+
+    .video-placeholder {
+        padding: 28px;
+
+        min-height: 220px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}
